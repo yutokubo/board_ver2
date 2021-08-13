@@ -1,0 +1,9 @@
+<div class="wrap_page">
+  <div class="wrapper_edit">
+    <%=form_with model: @post , url: { action: :update } , html: { class: "post_edit_form" },local: true do |f|%>
+      <p><%= f.text_field :body, size: "60" %><p>
+      <p><%= f.text_area :body, size: "60x10" %><p>
+      <p><%= f.submit '投稿', class:"sub_btn"%></p>
+    <%end%>
+  </div>
+</div>

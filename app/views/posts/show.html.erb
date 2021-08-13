@@ -1,0 +1,22 @@
+ <div class="wrap_page">
+  <div class="wrapper_show">
+    <div class="post_s_body">
+      <div class="side_s_area">
+        <%= image_tag(@post.user.avatar.thumb.url, size: '50', class: 'usr_thumb')%>
+      </div>
+      <div class="contents_s_area">    
+        <p><%=@post.user.name%></p>
+        <p><%= l @post.created_at%></p>
+        <p><%=@post.body%></p>
+      </div>
+      <div class="btm_s_area"> 
+      <%if current_user%>
+        <%=link_to "edit", edit_post_path(current_user)%> |
+        <%= link_to "delete", @post, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+      <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+
+

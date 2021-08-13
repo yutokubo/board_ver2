@@ -1,0 +1,33 @@
+.wrapper_top {
+  width:50%;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+    color:black;
+  }
+  .post_body {
+    height:200px;
+    border:solid 1px;
+    border-color:rgba(188, 192, 196, 0.885);
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    .contents-area {
+      padding: 10px 20px 50px 70px;
+    }
+    .side-area {
+      float:  left;
+      padding:15px 0px 0px 10px;
+    }
+    p {
+      margin:0;
+    }
+  }
+}
+
+
+
+
+
+

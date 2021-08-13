@@ -7,9 +7,32 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
   </head>
 
   <body>
+    <% if flash[:notice] %>
+      <div class="alert alert-info">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+
+    <nav class="navbar fixed-top navbar-light" style="background-color: #3ca39b;">
+      <%= link_to root_path, class:"navbar_brand" do %>
+        <%= image_pack_tag 'media/images/sample.svg', width:30, height:30, class:"d-inline-block align-top " %>
+        <span class="navbar-brand" style="color:#fff;">oardVer2<span>
+      <%end%>
+      <%= link_to new_post_path, class:"new_post" do %>
+      <i class="fas fa-plus"></i>
+      <%end%>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

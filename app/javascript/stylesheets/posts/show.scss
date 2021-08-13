@@ -1,0 +1,26 @@
+.wrapper_show {
+  width:50%;
+  margin: 0 auto;
+  .post_s_body {
+    height:200px;
+    border:solid 1px;
+    border-color:rgba(188, 192, 196, 0.885);
+    border-radius: 10px;
+    background-color: #fff;
+    .contents_s_area {
+      padding: 10px 20px 50px 70px;   
+    }
+    .side_s_area {
+      float:  left;
+      padding:15px 0px 0px 10px;
+    }
+    .btm_s_area {
+      height: 68px;
+      text-align: right;
+      margin: 40px 10px 0px 0px;
+    }
+    p {
+      margin:0;
+    }
+  }
+}

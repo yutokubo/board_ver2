@@ -1,0 +1,23 @@
+<div class="wrap_page">
+  <div class="wrapper_top">
+      <% @posts.each do |post| %> 
+        <%= link_to post_path(post),class:"index_post" do %>
+          <div class="post_body">
+            <div class="side-area">
+              <%= image_tag(post.user.avatar.thumb.url, size: '50', class: 'usr_thumb')%>
+            </div>
+            <div class="contents-area">
+              <p><%=post.user.name%></p>
+              <p><%= l post.created_at%></p>
+              <p><%=post.body%></p>
+            </div>
+          </div>
+        <%end%>
+      <%end%>
+  </div>
+</div>
+
+
+
+
+
